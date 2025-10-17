@@ -11,7 +11,10 @@
   <body>
 
     <head>
-      <img src= "images/Client3_LogoPalette1_2E4057.png" alt= "Book Haven Logo" width="100">
+      <div class="logo-container">
+        <img src= "images/Client3_LogoPalette1_EE583F.png" alt= "Book Haven Logo" width="100">
+        <span class="site-name"> BOOK HAVEN BOOKSTORE </span>
+      </div>
       <header>
         <nav>
             <a href="index.html"> Home </a>
@@ -21,39 +24,134 @@
         </nav>
   </header>
 
+  <style>
+    .home-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .home-table th,
+    .home-table td {
+      border: 5px solid #2e4057;
+      text-align: center;
+      vertical-align: top;
+      background-color: #f7b3cc;
+    }
+
+    .home-table img{
+      border: 5px solid #2e4057;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto
+    }
+
+    h2 {
+      text-align: center;
+    }
+    
+    .shop-category {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .shop-category h2 {
+      margin-bottom: 30px;
+      font-size: 16px;
+      text-align:left;
+    }
+
+    .category-grid{
+      display: flex;
+      justify-content: center;
+      flex wrap;
+      gap:30px
+    }
+
+    .category-card{
+      border:5px solid #2ef4057;
+      border-radius: 10px;
+      width: 220px;
+      padding: 20px;
+      box-shadow: 0 5px 10px;
+    }
+
+    .category-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 5px;
+    }
+
+    .category-card h3 {
+      margin-top: 15px;
+    }
+
+    .category-card button{
+      margin-top: 10px;
+      padding; 10px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+  </style>
+  
   <hr>
 
     <main>
       <section>
         <h1> Welcome to Book Haven Bookstore </h1>
 
-        <p>Welcome to our cozy corner for all your literature needs. We house a wide variety of books ranging from facts to fiction. Explore our new arrivals along with other collections of books along with magazines, journals and even office supplies.</p>
-
-        <button> Shop Now </button>
-        
+        <p>Welcome to our cozy corner for all your literature needs. We house a wide variety of books ranging from facts to fiction. Explore our new arrivals along with other collections of books along with magazines, journals and even office supplies.</p>  
       </section>
 
       <section>
-        <h2> Featured Books </h2>
-        <table>
+        <h2> <u>Featured Books</u> </h2>
+        <table class="home-table">
           <tr>
-            <td><img src= "images/Client3_Book1.png" alt= "Client Book 1" width= "150"> <br> Book 1</td>
-            <td><img src= "images/Client3_Book2.png" alt= "Client Book 2" width= "150"> <br> Book 2</td>
-            <td><img src= "images/Client3_Book3.png" alt= "Client Book 3" width= "150"> <br> Book 3</td>
+            <td width=600><img src= "images/Client3_Book1.png" alt= "Client Book 1" width= "450"> <br> <h2>Book 1</h2> </td>
+            <td width=600><img src= "images/Client3_Book2.png" alt= "Client Book 2" width= "450"> <br> <h2>Book 2</h2> </td>
+            <td width=600><img src= "images/Client3_Book3.png" alt= "Client Book 3" width= "450"> <br> <h2>Book 3</h2> </td>
           </tr>
         </table>
       </section>
+
+      <section>
+        <h2><u>shpo by category:</u></h2>
+      <div class= "category-grid">
+        <div class= "category-card">
+          <img src= "images/Client3_Book3.png" alt= "Books">
+          <h3>Books</h3>
+          <a href="gallery.html"><button>Browse</button></a>
+        </div>
+
+        <div class= "category-card">
+          <img src= "images/Client3_Magazine3.png" alt= "Magazines">
+          <h3>Magazines</h3>
+          <a href="gallery.html"><button>Browse</button></a>
+        </div>
+
+        <div class= "category-card">
+          <img src= "images/Client3_Notebook.png" alt= "Journals">
+          <h3>Journals</h3>
+          <a href="gallery.html"><button>Browse</button></a>
+        </div>
+
+        <div class= "category-card">
+          <img src= "images/Client3_Stickers.png" alt= "Office Supplies">
+          <h3>Office Supplies</h3>
+          <a href="gallery.html"><button>Browse</button></a>
+        </div>
+      </div>
+      </section>
+
     </main>
 
       <hr>
 
       <footer>
         <p> &copy; 2025 Book Haven Bookstore | Contact: info@bookhaven.com</p>
-        <p> <strong> Hours of Operation: </strong> <br>
-          Monday - Friday: 9am to 8pm <br>
-          Saturday: 10am to 6pm <br>
-          Sunday: 11am to 6pm 
-        </p>
       </footer>
   </body>
 </html>
