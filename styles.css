@@ -1,24 +1,23 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding:0;
+  padding: 0;
 }
 
 body {
   margin: 0;
   font-family: Calibri, sans-serif;
-  color: #2E4057;
-  background-color: #FFF7EE;
+  color: #2e4057;
+  background-color: #fff7ee;
   line-height: 1.5;
 }
 
-head {
+header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 10px 20px;
-  border-bottom: solid 1px #aaa;
-  background-color: #2E4057;
+  background-color: #ee583f;
 }
 
 .logo-container {
@@ -33,65 +32,90 @@ logo {
 }
 
 .site-name {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   font-weight: bold;
   font-size: 40px;
-  color: #FFF7EE;
+  color: #ee583f;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 nav a {
   display: inline-block;
   margin-left: 15px;
   font-weight: bold;
-  color: #FFF7EE;
+  background-color: #fff7ee;
+  color: #ee583f;
   padding: 8px 12px;
   border-radius: 0.2rem;
   border: solid 1px #aaa;
   text-align: center;
   text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-  color: #EE583F;
+  color: #fff7ee;
+  background-color: #2e4057;
 }
 
 nav a[aria-current='page'] {
-  color: #2E4057;
-  background-color: #d4d4d4;
+  color: #fff7ee;
+  background-color: #ee583f;
+  border-radius: 0.2rem;
+  padding 8px 12px
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
 .hero {
-  background-color: #F7B3CC;
+  background-color: #c7b65e;
   padding: 30px 20px;
   text-align: center;
 }
 
 .hero h1 {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   font-weight: bold;
   font-size: 40px;
-  color: #2E4057;
+  color: #2e4057;
   margin-bottom: 10px;
 }
 
-.hero p{
+.hero p {
   font-family: Calibri, sans-serif;
   font-size: 20px;
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .hero button {
-  background-color: #EE583F;
-  color: #FFF7EE;
+  background-color: #ee583f;
+  color: #fff7ee;
   border: none;
-  padding:10px 20px;
+  padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
   font-family: Roboto, sans-serif;
 }
 
 .hero button hover {
-  background-color: #C7B65E
+  background-color: #f7b3cc;
 }
 .featured {
   padding: 20px;
@@ -102,8 +126,42 @@ nav a[aria-current='page'] {
   font-family: Impact, sans-serif;
   font-weight: bold;
   font-size: 25px;
-  color: #2E4057;
+  color: #2e4057;
   margin-bottom: 15px;
+}
+
+table.gallery {
+  background-color: #2e4057;
+  border-collapse: separate;
+  border-spacing: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+table.gallery td {
+  background-color: #c7b65e;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+table.gallery img {
+  width: 150px;
+  border-radius: 5px;
+}
+
+table.gallery button{
+  background-color: #ee583f;
+  color: #fff7ee;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+table.gallery button.hover {
+  background-color: #c7b65e;
 }
 
 .books {
@@ -116,7 +174,7 @@ nav a[aria-current='page'] {
 }
 
 .books li {
-  display : flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -133,18 +191,19 @@ nav a[aria-current='page'] {
 }
 
 footer {
-  background-color: #2E4057;
-  color: #FFF7EE;
+  background-color: #2e4057;
+  color: #fff7ee;
   text-align: center;
   padding: 15px 10px;
   font-size: 0.9em;
 }
 
-a:focus, button:focus {
-  outline: 2px solid #EE583F;
+a:focus,
+button:focus {
+  outline: 2px solid #ee583f;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
