@@ -114,7 +114,7 @@ main {
   font-family: Roboto, sans-serif;
 }
 
-.hero button hover {
+.hero button:hover {
   background-color: #f7b3cc;
 }
 .featured {
@@ -130,37 +130,45 @@ main {
   margin-bottom: 15px;
 }
 
+/* Gallery page table*/
 table.gallery {
   background-color: #2e4057;
   border-collapse: separate;
   border-spacing: 10px;
   width: 100%;
-  text-align: center;
-  padding: 10px;
+  margin: 0 auto;
+  text-align:center;
 }
 
 table.gallery td {
-  background-color: #c7b65e;
+  background-color: #f7b3cc;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: top;
 }
 
 table.gallery img {
-  width: 150px;
-  border-radius: 5px;
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 200px;
+  border-radius: 8px;
 }
 
 table.gallery button{
-  background-color: #ee583f;
+  display: inline-block;
+  margin-top: 8px;
+  background-color: #2e4057;
   color: #fff7ee;
+  text-align: center;
   border: none;
   border-radius: 5px;
+  font-weight: bold;
   padding: 5px 10px;
-  margin-top: 5px;
   cursor: pointer;
 }
 
-table.gallery button.hover {
+table.gallery button:hover {
   background-color: #c7b65e;
 }
 
@@ -180,12 +188,12 @@ table.gallery button.hover {
 }
 
 .books img {
-  max-witdh: 150px;
+  max-width: 150px;
   border-radius: 4px;
 }
 
 .books span.caption {
-  font-famiy: Comfortaa, sans-serif;
+  font-family: Comfortaa, sans-serif;
   font-size: 11px;
   margin-top: 5px;
 }
@@ -204,6 +212,11 @@ button:focus {
 }
 
 @media screen and (max-width: 768px) {
+  table.gallery, table.gallery tr, table.gallery td {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
   header {
     flex-direction: column;
     align-items: flex-start;
